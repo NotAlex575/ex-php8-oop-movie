@@ -4,17 +4,27 @@
         public $genre1;
         public $genre2;
         
+        function __construct($genre1, $genre2){
+            $this->genre1 = $genre1;
+            $this->genre2 = $genre2;
+        }
+
+        function __tostring(){
+            return $this->genre1.", ".$this->genre2;
+        }
     }
 
     class Movie{
         public $name;
         public $targetMovieAge;
         public $price;
+        public $genre;
 
 
-        function __construct($name, $targetMovieAge, $price){
+        function __construct($name, $targetMovieAge, Genre $genre, $price){
             $this->name = $name;
             $this->targetMovieAge;
+            $this->genre = $genre;
             $this->price = $price;
         }
 
@@ -31,9 +41,10 @@
         }
 
     }
-
-    $movie1 = new Movie("Heidi - Una Nuova Avventura", 12, 6.90);
-    $movie2 = new Movie("Chainsaw Man - Il film: La storia di Reze", 16, 8,90);
+    $movie1Genre1 = new Genre("Avventura", "Animazione");
+    $movie1Genre2 = new Genre("Azione", "Animazione");
+    $movie1 = new Movie("Heidi - Una Nuova Avventura", 12,$movie1Genre1 ,6.90);
+    $movie2 = new Movie("Chainsaw Man - Il film: La storia di Reze", 16, $movie1Genre2,8.90);
 
 ?>
 
@@ -61,6 +72,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Film: ' .$movie->name . '</h5>
                             <p class="card-text">Adatto ad un pubblico di: ' . $movie->seeTargetMovieAge() . '</p>
+                            <p class="card-text">Genere: '.$movie->genre.'</p>
                             <p class="card-text fw-semibold">Prezzo: ' . $movie->price . '€</p>
                         </div>
                     </div>
