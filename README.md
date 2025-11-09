@@ -1,73 +1,31 @@
-<h1 align="center">Ex Php8 Oop Movie</h1>
+EX - PHP Classe Movie
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/ex-php8-oop-movie?color=56BEB8">
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/ex-php8-oop-movie?color=56BEB8">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/ex-php8-oop-movie?color=56BEB8">
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/ex-php8-oop-movie?color=56BEB8">
-</p>
+Descrizione
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
-</p>
+Alleniamoci con la OOP di PHP immaginando delle classi pertinenti a Film e generi cinematografici
+Svolgimento
+Creare un file index.php in cui
+- è definita la classe Movie
+   => all'interno della classe sono dichiarate delle variabili d'istanza
+   => all'interno della classe è definito un costruttore
+   => all'interno della classe è definito almeno un metodo
+- vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
 
-<br>
-
-## :dart: About ##
-
-Describe your project
-
-## :sparkles: Features ##
-
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
-
-## :rocket: Technologies ##
-
-The following tools were used in this project:
-
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-
-## :white_check_mark: Requirements ##
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting ##
-
-```bash
-# Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/ex-php8-oop-movie
-
-# Access
-$ cd ex-php8-oop-movie
-
-# Install dependencies
-$ yarn
-
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
-```
-
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
+- è definita una classe Genre
+  -> all'interno della classe sono dichiarate delle variabili d'istanza
+  -> all'interno della classe è definito un costruttore
+- ogni film ha un genere
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Bonus 1
+Modificare la classe Movie in modo che accetti piú di un genere.
+Bonus 2
+Aggiungere un Trait alla classe Movie con almeno una proprietà e un metodo.
+Bonus 3
+Creare un layout completo per stampare a schermo una lista di movies.
+Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi file e cartelle.
 
-&#xa0;
-
-<a href="#top">Back to top</a>
+Possiamo ad esempio organizzare il codice
+- creando un file dedicato ai dati (tipo le array di oggetti) che potremmo chiamare db.php
+- mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare Models/
+- organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
