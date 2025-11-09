@@ -1,4 +1,6 @@
 <?php
+    require_once "./Trait/Director.php";
+
     require_once "./Models/Movie.php";
     require_once "./Models/Genre.php";
     require_once "./db.php";
@@ -20,13 +22,13 @@
     <div class="container my-5">
     <div class="row g-4 justify-content-center">
         <?php
-            $movies = [$movie1, $movie2];
             foreach ($movies as $movie) {
                 echo '
                 <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                     <div class="card shadow-sm" style="width: 18rem;">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Film: ' .$movie->name . '</h5>
+                            <h3 class="card-title">Film: ' .$movie->name . '</h3>
+                            <h5 class="card-text">Autore: '.$movie->getDirector().'</h5>
                             <p class="card-text">Adatto ad un pubblico di: ' . $movie->seeTargetMovieAge() . '</p>
                             <p class="card-text">Genere: '.$movie->getGenreNames().'</p>
                             <p class="card-text fw-semibold">Prezzo: ' . $movie->price . '€</p>

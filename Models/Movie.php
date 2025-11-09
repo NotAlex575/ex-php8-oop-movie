@@ -6,6 +6,8 @@ class Movie{
         public $price;
         protected $genre;
 
+        use Director;
+
         function getGenreNames(){
             return $this->genre->getGenre();
         }
