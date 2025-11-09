@@ -1,15 +1,15 @@
 <?php
 
     class Genre{
-        public $genre1;
-        public $genre2;
+        protected $genre1;
+        protected $genre2;
         
         function __construct($genre1, $genre2){
             $this->genre1 = $genre1;
             $this->genre2 = $genre2;
         }
 
-        function __tostring(){
+        function getGenre(){
             return $this->genre1.", ".$this->genre2;
         }
     }
@@ -18,8 +18,11 @@
         public $name;
         public $targetMovieAge;
         public $price;
-        public $genre;
+        protected $genre;
 
+        function getGenreNames(){
+            return $this->genre->getGenre();
+        }
 
         function __construct($name, $targetMovieAge, Genre $genre, $price){
             $this->name = $name;
@@ -72,7 +75,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Film: ' .$movie->name . '</h5>
                             <p class="card-text">Adatto ad un pubblico di: ' . $movie->seeTargetMovieAge() . '</p>
-                            <p class="card-text">Genere: '.$movie->genre.'</p>
+                            <p class="card-text">Genere: '.$movie->getGenreNames().'</p>
                             <p class="card-text fw-semibold">Prezzo: ' . $movie->price . '€</p>
                         </div>
                     </div>
